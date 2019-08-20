@@ -1,0 +1,28 @@
+{
+  "name": "web-memory-cache",
+  "version": "1.0.0",
+  "description": "Memory cache running on the browser, does not support persistence",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adv30/web-memory-cache.git"
+  },
+  "keywords": [
+    "cache",
+    "memory",
+    "cache",
+    "web",
+    "cache",
+    "web",
+    "redis"
+  ],
+  "author": "adv30@126.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adv30/web-memory-cache/issues"
+  },
+  "homepage": "https://github.com/adv30/web-memory-cache#readme"
+}
