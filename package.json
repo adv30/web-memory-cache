@@ -1,7 +1,7 @@
 {
   "name": "npm-typescript-boilerplate",
   "version": "1.1.1",
-  "description": "typescript样板库",
+  "description": "web-memory-cache",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -24,7 +24,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xiaomingplus/npm-typescript-boilerplate.git"
+    "url": "https://github.com/adv30/web-memory-cache.git"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.2.1",

@@ -12,7 +12,7 @@
 ## 如何修改本项目为你自己的项目
 
 ```shell
-git clone https://github.com/xiaomingplus/npm-typescript-boilerplate.git your-project-name
+git clone https://github.com/adv30/web-memory-cache.git web-memory-cache
 cd your-project-name
 # 安装依赖
 yarn i
@@ -26,10 +26,8 @@ git remote set-url origin <your-git-url>
 
 ## 如何安装
 
-(修改为你自己的：
-
 ```shell
-npm i npm-typescript-boilerplate
+npm i web-memory-cache
 ```
 
 ## 如何使用
@@ -37,10 +35,10 @@ npm i npm-typescript-boilerplate
 (修改为你自己的
 
 ```typescript
-import { Greeter } from '@tencent/typescript-boilerplate'
+import webMemoryCache from 'web-memory-cache'
 
-const str = Greeter('Bob')
-console.log('str', str)
+webMemoryCache.add({ aa: 'aaaa' }, 'a')
+webMemoryCache.add({ bb: 'bbbb' }, 'b')
 ```
 
 ## API
@@ -70,10 +68,8 @@ yarn commit
 
 ### 如何打包发布
 
-(修改为你自己的
-
 ```shell
-cd npm-typescript-boilerplate
+cd webMemoryCache;
 # 自动打tag和生成changelog,并修改package.json
 npm run release
 npm publish

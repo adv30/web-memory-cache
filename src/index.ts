@@ -1,1 +1,3 @@
-export const Greeter = (name: string) => `Hello ${name}`
+import Pool from './Pool'
+
+export default Pool
