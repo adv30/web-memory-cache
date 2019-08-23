@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.3"></a>
+## [0.2.3](https://github.com/adv30/web-memory-cache/compare/v0.2.2...v0.2.3) (2019-08-23)
+
+
+### Bug Fixes
+
+* gc foreach bug ([c11d351](https://github.com/adv30/web-memory-cache/commit/c11d351))
+
+
+
 <a name="0.2.2"></a>
 ## [0.2.2](https://github.com/adv30/web-memory-cache/compare/v0.2.1...v0.2.2) (2019-08-23)
 
