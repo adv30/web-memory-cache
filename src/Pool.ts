@@ -62,7 +62,7 @@ class Pool {
     }
 
     public gc() {
-        if (this._gcKey && this._gcKey.size === 0) {
+        if (!this._gcKey || this._gcKey.size === 0) {
             return
         }
 
