@@ -1,6 +1,6 @@
 {
   "name": "web-memory-cache",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "web-memory-cache",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
