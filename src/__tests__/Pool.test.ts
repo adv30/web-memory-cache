@@ -1,8 +1,9 @@
 import Pool from '../index'
 
 const obj = { aa: 'aaa' }
-test('Pool.get() and Pool.get()', () => {
-    Pool.add(obj, 'a')
+Pool.add(obj, 'a')
+
+test('Pool.get()', () => {
     expect(Pool.get('a')).toBe(obj)
 })
 

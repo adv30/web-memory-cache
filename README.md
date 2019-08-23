@@ -41,6 +41,7 @@ webMemoryCache.add({ bb: 'bbbb' }, 'b')
 
 ## API
 
+```typescript
 add(el: any, key: string, life: number = this.life)
 get<T>(key: string, continueLife: boolean = true): T | null
 gc()
@@ -48,6 +49,7 @@ remove(key: string)
 keyToGc(key: string)
 gcInterval: number
 life: number = 10
+```
 
 这里列出所有的 API，如果有很多的话，建议这里只写索引，具体的参数信息可以导航到 docs 目录下的文件
 

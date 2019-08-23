@@ -13,7 +13,7 @@ class Pool {
     // tslint:disable-next-line:variable-name
     private _gcInterval: number = 3000
     // tslint:disable-next-line:variable-name
-    private _refGc: number = 0
+    private _refGc: any = null
     // tslint:disable-next-line:variable-name
     private _pool: Map<string, any> = new Map()
     // 当前pool中存的值的加入时间戳
