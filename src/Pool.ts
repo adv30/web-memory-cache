@@ -62,11 +62,15 @@ class Pool {
     }
 
     public gc() {
-        for (const k of this._gcKey) {
-            this.remove(k)
+        if (this._gcKey.size === 0) {
+            return
         }
 
-        this._gcKey.clear()
+        for (const k of this._gcKey) {
+            // console.log('k::', k)
+            this.remove(k)
+        }
+        // console.log('this._pool::', this._pool, 'this._life::', this._life, 'this._modiffTime::', this._modiffTime, 'this._gcKey::', this._gcKey)
     }
 
     public remove(key: string) {
