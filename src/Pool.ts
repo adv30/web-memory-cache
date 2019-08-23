@@ -62,9 +62,10 @@ class Pool {
     }
 
     public gc() {
-        this._gcKey.forEach(k => {
+        for (const k of this._gcKey) {
             this.remove(k)
-        })
+        }
+
         this._gcKey.clear()
     }
 
