@@ -8,5 +8,5 @@ test('My Pool.add() and Pool.get()', () => {
 
 test('setTimeout 4000ms Pool.get', () => {
     Pool.remove('a')
-    expect(obj).toBe(Pool.get('a'))
+    expect(null).toBe(Pool.get('a'))
 })
