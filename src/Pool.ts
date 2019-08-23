@@ -1,5 +1,3 @@
-import IContainerElement from './interface/IContainerElement'
-
 class Pool {
     public static get instance() {
         if (Pool._instance === null) {
