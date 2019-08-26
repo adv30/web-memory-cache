@@ -63,6 +63,7 @@ class Pool {
 
     public gc() {
         if (!this._gcKey || this._gcKey.size === 0) {
+            console.log('gc:::', this._gcKey)
             return
         }
 
