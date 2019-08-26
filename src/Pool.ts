@@ -25,15 +25,15 @@ class Pool {
     private _life: Map<string, number> = new Map()
     // 等待GC的key
     // tslint:disable-next-line:variable-name
-    private _gcKey: Map<string, null> = new Map()
+    private _gcKey: Set<string> = new Set()
 
     private constructor() {
         this._refGc = setInterval(this.gc, this._gcInterval)
-        console.log('constructor setInterval run....')
+        // console.log('constructor setInterval run....')
     }
-    public get gcKey() {
-        return this._gcKey
-    }
+    // public get gcKey() {
+    //     return this._gcKey
+    // }
     /**
      * 增加一个元素到pool
      * @param el 要增加的元素
@@ -68,12 +68,8 @@ class Pool {
 
     public gc() {
         const self = Pool.instance
-        if (!self._gcKey || self._gcKey.size === 0) {
-            console.log('gc:::', self._gcKey, self)
-            return
-        }
 
-        for (const [k] of self._gcKey) {
+        for (const k of self._gcKey) {
             // console.log('k::', k)
             self.remove(k)
         }
@@ -88,7 +84,7 @@ class Pool {
     }
 
     public keyToGc(key: string) {
-        this._gcKey.set(key, null)
+        this._gcKey.add(key)
     }
 
     public set gcInterval(interval: number) {
