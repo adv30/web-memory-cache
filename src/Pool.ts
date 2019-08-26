@@ -29,11 +29,8 @@ class Pool {
 
     private constructor() {
         this._refGc = setInterval(this.gc, this._gcInterval)
-        // console.log('constructor setInterval run....')
     }
-    // public get gcKey() {
-    //     return this._gcKey
-    // }
+
     /**
      * 增加一个元素到pool
      * @param el 要增加的元素
@@ -70,10 +67,8 @@ class Pool {
         const self = Pool.instance
 
         for (const k of self._gcKey) {
-            // console.log('k::', k)
             self.remove(k)
         }
-        // console.log('this._pool::', this._pool, 'this._life::', this._life, 'this._modiffTime::', this._modiffTime, 'this._gcKey::', this._gcKey)
     }
 
     public remove(key: string) {
