@@ -2,6 +2,7 @@ class Pool {
     public static get instance() {
         if (Pool._instance === null) {
             Pool._instance = new Pool()
+            console.log('new Pool()', Pool._instance)
         }
         return Pool._instance
     }
@@ -28,6 +29,10 @@ class Pool {
 
     private constructor() {
         this._refGc = setInterval(this.gc, this._gcInterval)
+        console.log('constructor setInterval run....')
+    }
+    public get gcKey() {
+        return this._gcKey
     }
     /**
      * 增加一个元素到pool
@@ -63,7 +68,7 @@ class Pool {
 
     public gc() {
         if (!this._gcKey || this._gcKey.size === 0) {
-            console.log('gc:::', this._gcKey)
+            console.log('gc:::', this._gcKey, this)
             return
         }
 
