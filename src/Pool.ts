@@ -24,7 +24,7 @@ class Pool {
     private _life: Map<string, number> = new Map()
     // 等待GC的key
     // tslint:disable-next-line:variable-name
-    private _gcKey: Set<string> = new Set()
+    private _gcKey: Map<string, null> = new Map()
 
     private constructor() {
         this._refGc = setInterval(this.gc, this._gcInterval)
@@ -67,7 +67,7 @@ class Pool {
             return
         }
 
-        for (const k of this._gcKey) {
+        for (const [k] of this._gcKey) {
             // console.log('k::', k)
             this.remove(k)
         }
@@ -82,7 +82,7 @@ class Pool {
     }
 
     public keyToGc(key: string) {
-        this._gcKey.add(key)
+        this._gcKey.set(key, null)
     }
 
     public set gcInterval(interval: number) {
