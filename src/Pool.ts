@@ -67,14 +67,15 @@ class Pool {
     }
 
     public gc() {
-        if (!this._gcKey || this._gcKey.size === 0) {
-            console.log('gc:::', this._gcKey, this)
+        const self = Pool.instance
+        if (!self._gcKey || self._gcKey.size === 0) {
+            console.log('gc:::', self._gcKey, self)
             return
         }
 
-        for (const [k] of this._gcKey) {
+        for (const [k] of self._gcKey) {
             // console.log('k::', k)
-            this.remove(k)
+            self.remove(k)
         }
         // console.log('this._pool::', this._pool, 'this._life::', this._life, 'this._modiffTime::', this._modiffTime, 'this._gcKey::', this._gcKey)
     }
