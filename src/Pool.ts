@@ -2,7 +2,7 @@ class Pool {
     public static get instance() {
         if (Pool._instance === null) {
             Pool._instance = new Pool()
-            console.log('new Pool()', Pool._instance)
+            // console.log('new Pool()', Pool._instance)
         }
         return Pool._instance
     }
