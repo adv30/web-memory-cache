@@ -9,7 +9,7 @@ class TestObj {
     }
 }
 const objA = new TestObj()
-const cache = new MomentCache()
+const cache = MomentCache
 
 const objB = new TestObj()
 objB.id = 'xxxxyyyy'
